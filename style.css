@@ -196,38 +196,134 @@ body {
 }
 
 /* Card */
+/* From Uiverse.io by JohnnyCSilva */
 .card {
-    box-sizing: border-box;
-    width: 190px;
-    height: 254px;
-    background: rgba(217, 217, 217, 0.58);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
+    width: 195px;
+    height: 285px;
+    background: #313131;
+    border-radius: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    user-select: none;
-    font-weight: bolder;
-    color: black;
+    color: white;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 
-.card-img {
-    width: 100%;
+.img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 17px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.textBox > .text {
+    font-weight: bold;
+}
+
+.textBox > .head {
+    font-size: 20px;
+}
+
+.textBox > .price {
+    font-size: 17px;
+}
+
+.textBox > span {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.card:hover > .textBox {
+    opacity: 1;
+}
+
+.card:hover > .img {
+    height: 100%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .card:hover {
-    border: 1px solid black;
-    transform: scale(1.05);
+    transform: scale(1.04) rotate(-1deg);
 }
 
-.card:active {
-    transform: scale(0.95) rotateZ(1.7deg);
+.favorite-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.star-icon {
+    width: 24px;
+    height: 24px;
+    fill: #666;
+    transition: all 0.3s ease;
+    opacity: 0; /* hidden by default */
+    pointer-events: none;
+}
+
+.card:hover .star-icon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Show star if checked */
+.favorite-checkbox:checked + .star-icon {
+    fill: #ffeb49;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Optional: scale on hover */
+.card:hover .star-icon:hover {
+    transform: scale(1.1);
+}
+
+.game-logo {
+    width: 140px; /* adjust size as needed */
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .game-logo {
+    transform: scale(1.05);
 }
