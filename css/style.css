@@ -4,10 +4,21 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header at the top */
+header {
+    flex-shrink: 0;
+}
+
+/* Main content area that grows */
+main {
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -22,7 +33,8 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* <- distributes space between items */
+    padding: 0 30px; /* optional: adds spacing on left/right edges */
     z-index: 1000;
 }
 
@@ -42,6 +54,7 @@ body {
     padding: 15px;
     font-size: 14px;
     color: #555;
+    flex-shrink: 0;
 }
 
 .group {
@@ -193,8 +206,6 @@ body {
     transform: translateX(30px);
 }
 
-/* Card */
-/* From Uiverse.io by JohnnyCSilva */
 .card {
     width: 195px;
     height: 285px;
@@ -326,4 +337,113 @@ body {
 
 .card:hover .game-logo {
     transform: scale(1.05);
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* button styling */
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #00cce6;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial", serif;
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+#article {
+    display: block;
+    clear: both; /* helps clear any floats if used */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#article h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #1e90ff; /* DodgerBlue */
+    text-align: center;
+}
+
+#article h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 6px;
+    color: #1e90ff;
+}
+
+#article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+#article ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#article ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+#article strong {
+    color: #111;
+}
+
+#article em {
+    font-style: italic;
+    color: #555;
+}
+
+#article img {
+    display: block;          /* makes the image a block element */
+    max-width: 500px;        /* limit max width */
+    width: 100%;             /* scale down if container is smaller */
+    height: auto;            /* maintain aspect ratio */
+    margin: 0 auto 20px auto; /* center horizontally and add 20px bottom margin */
+    border-radius: 8px;      /* optional: slightly rounded corners */
 }

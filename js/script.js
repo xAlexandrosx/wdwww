@@ -29,7 +29,8 @@ const games = [
         image: "/images/league.jpg",
         logo: "/images/league_logo.png",
         genre: "Team based MOBA",
-        alt: "league of legends"
+        alt: "league of legends",
+        link: "game-articles/leagueoflegends.html"
     },
     {
         name: "CS: GO",
@@ -37,7 +38,8 @@ const games = [
         image: "/images/csgo.jpg",
         logo: "/images/csgo_logo.png",
         genre: "First-person shooter",
-        alt: "cs go"
+        alt: "cs go",
+        link: "game-articles/csgo.html"
     },
     {
         name: "Minecraft",
@@ -45,7 +47,8 @@ const games = [
         image: "/images/Minecraft.jpg",
         logo: "/images/MinecraftLogo.png",
         genre: "Sandbox Adventure",
-        alt: "minecraft"
+        alt: "minecraft",
+        link: "game-articles/minecraft.html"
     },
     {
         name: "The Binding of Isaac",
@@ -53,7 +56,8 @@ const games = [
         image: "/images/Isaac.jpg",
         logo: "/images/IsaacLogo.png",
         genre: "Roguelike",
-        alt: "The Binding of Isaac"
+        alt: "The Binding of Isaac",
+        link: "game-articles/bindingofisaac.html"
     },
     {
         name: "The Witcher 3",
@@ -61,7 +65,8 @@ const games = [
         image: "/images/Witcher3.jpg",
         logo: "/images/Witcher3Logo.png",
         genre: "Action RPG",
-        alt: "Witcher 3"
+        alt: "Witcher 3",
+        link: "game-articles/witcher3.html"
     },
     {
         name: "World of Warcraft",
@@ -69,7 +74,8 @@ const games = [
         image: "/images/WoW.jpg",
         logo: "/images/WOWlogo.png",
         genre: "MMO RPG",
-        alt: "WoW"
+        alt: "WoW",
+        link: "game-articles/wow.html"
     },
     {
         name: "Hearthstone",
@@ -77,7 +83,8 @@ const games = [
         image: "/images/Hearthstone.jpg",
         logo: "/images/Hearthstone-Logo-1.png",
         genre: "Trading Card Game",
-        alt: "hs"
+        alt: "hs",
+        link: "game-articles/hearthstone.html"
     },
     {
         name: "Magic the Gathering",
@@ -85,7 +92,8 @@ const games = [
         image: "/images/MtG.jpg",
         logo: "/images/MtG_logo.png",
         genre: "Trading Card Game",
-        alt: "MtG"
+        alt: "MtG",
+        link: "game-articles/mtg.html"
     },
     {
         name: "Assasin's Creed",
@@ -93,7 +101,8 @@ const games = [
         image: "/images/Assasins.jpg",
         logo: "/images/Assasins_logo.png",
         genre: "Action RPG",
-        alt: "AC"
+        alt: "AC",
+        link: "game-articles/assasinscreed1.html"
     },
     {
         name: "Cyberpunk 77",
@@ -101,7 +110,8 @@ const games = [
         image: "/images/Cyberpunk.jpg",
         logo: "/images/Cyberpunk_logo.png",
         genre: "FPS RPG",
-        alt: "Cyberpunk"
+        alt: "Cyberpunk",
+        link: "game-articles/cyberpunk77.html"
     },
     {
         name: "Don't Starve Together",
@@ -109,7 +119,8 @@ const games = [
         image: "/images/DST.jpg",
         logo: "/images/DST_Logo.png",
         genre: "Survival",
-        alt: "DST"
+        alt: "DST",
+        link: "game-articles/dst.html"
     },
     {
         name: "Fortnite",
@@ -117,7 +128,8 @@ const games = [
         image: "/images/Fortnite.jpg",
         logo: "/images/Fortnite-Logo.png",
         genre: "Battle Royale",
-        alt: "fortnite"
+        alt: "fortnite",
+        link: "game-articles/fortnite.html"
     },
     {
         name: "Overwatch",
@@ -125,7 +137,8 @@ const games = [
         image: "/images/Overwatch.jpg",
         logo: "/images/overwatch_logo.png",
         genre: "Hero Shooter",
-        alt: "ov"
+        alt: "ov",
+        link: "game-articles/overwatch.html"
     },
     {
         name: "Sims 4",
@@ -133,7 +146,8 @@ const games = [
         image: "/images/Sims4.jpg",
         logo: "/images/Sims_4_logo.png",
         genre: "simulator",
-        alt: "sims"
+        alt: "sims",
+        link: "game-articles/sims4.html"
     },
     {
         name: "Valorant",
@@ -141,7 +155,8 @@ const games = [
         image: "/images/Valorant.jpg",
         logo: "/images/Valorant_logo.png",
         genre: "First-person shooter",
-        alt: "valorant"
+        alt: "valorant",
+        link: "game-articles/valorant.html"
     }
 ];
 
@@ -172,7 +187,7 @@ function buildCards() {
             <a><img class="img" src="${game.image}" alt="${game.alt}" /></a>
 
             <div class="textBox">
-                <img src="${game.logo}" alt="${game.name} Logo" class="game-logo" />
+                <a href=${game.link}><img src="${game.logo}" alt="${game.name} Logo" class="game-logo" /></a>
                 <span>by ${game.developer}</span>
                 <p class="text price">${game.genre}</p>
             </div>
