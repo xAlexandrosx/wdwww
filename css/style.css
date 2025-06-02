@@ -15,7 +15,119 @@ body.lol-article {
     background-image: url('../images/lolbackground.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* <-- This keeps it from moving when scrolling */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.dst-article {
+    background-image: url('../images/dstbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.ac-article {
+    background-image: url('../images/ac1background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.isaac-article {
+    background-image: url('../images/tboibackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.csgo-article {
+    background-image: url('../images/csgobackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.cyberpunk-article {
+    background-image: url('../images/cyberpunkbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.fortnite-article {
+    background-image: url('../images/fortnitebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.hearthstone-article {
+    background-image: url('../images/hearhtstonebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.minecraft-article {
+    background-image: url('../images/minecraftbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.mtga-article {
+    background-image: url('../images/mtgbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.overwatch-article {
+    background-image: url('../images/overwatchbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.sims-article {
+    background-image: url('../images/sims4background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.valorant-article {
+    background-image: url('../images/valorantbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.witcher-article {
+    background-image: url('../images/witcher3background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.wow-article {
+    background-image: url('../images/wowbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 

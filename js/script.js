@@ -120,7 +120,7 @@ const games = [
         logo: "/images/DST_Logo.png",
         genre: "Survival",
         alt: "DST",
-        link: "game-articles/dst.html"
+        link: "game-articles/dontstarvetogether.html"
     },
     {
         name: "Fortnite",
