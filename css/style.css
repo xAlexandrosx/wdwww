@@ -30,8 +30,8 @@ body {
 .content {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; /* space between cards */
-    justify-content: center; /* optional: center cards horizontally */
+    gap: 16px;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -211,12 +211,14 @@ body {
 }
 
 .img {
+    position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    position: absolute;
     transition: 0.2s ease-in-out;
     z-index: 1;
+    top: 0;
+    left: 0;
 }
 
 .textBox {
@@ -251,7 +253,7 @@ body {
     opacity: 1;
 }
 
-.card:hover > .img {
+.card:hover .img {
     height: 100%;
     filter: blur(7px);
     animation: anim 3s infinite;
@@ -291,9 +293,9 @@ body {
 }
 
 .star-icon {
-    width: 24px;
-    height: 24px;
-    fill: #666;
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
     transition: all 0.3s ease;
     opacity: 0; /* hidden by default */
     pointer-events: none;
