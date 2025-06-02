@@ -11,6 +11,14 @@ html, body {
     flex-direction: column;
 }
 
+body.lol-article {
+    background-image: url('../images/lolbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* <-- This keeps it from moving when scrolling */
+    background-repeat: no-repeat;
+}
+
 /* Header at the top */
 header {
     flex-shrink: 0;
@@ -394,7 +402,8 @@ main {
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
 }
 
 #article h1 {
