@@ -141,6 +141,86 @@ body.wow-article {
     background-repeat: no-repeat;
 }
 
+body.heartbound-article {
+    background-image: url('../images/heartboundbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.dota2-article {
+    background-image: url('../images/dota2background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.warcraft3-article {
+    background-image: url('../images/warcraft3_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.gtav-article {
+    background-image: url('../images/gtav_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.petparty-article {
+    background-image: url('../images/petparty_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.hollowknight-article {
+    background-image: url('../images/hollowknight_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.bloonstd-article {
+    background-image: url('../images/bloonstd_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.blackflag-article {
+    background-image: url('../images/blackflag_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.genshin-article {
+    background-image: url('../images/genshin_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.apex-article {
+    background-image: url('../images/apex_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
 /* Header at the top */
 header {
     flex-shrink: 0;

@@ -157,6 +157,96 @@ const games = [
         genre: "First-person shooter",
         alt: "valorant",
         link: "game-articles/valorant.html"
+    },
+    {
+        name: "Heartbound",
+        developer: "Pirate Software",
+        image: "/images/Heartbound.jpg",
+        logo: "/images/heartbound_logo.png",
+        genre: "RPG Adventure",
+        alt: "heartbound",
+        link: "game-articles/heartbound.html"
+    },
+    {
+        name: "Dota 2",
+        developer: "Valve",
+        image: "/images/dota2.jpg",
+        logo: "/images/dota2_logo.png",
+        genre: "Team based MOBA",
+        alt: "dota 2",
+        link: "game-articles/dota2.html"
+    },
+    {
+        name: "Warcraft 3",
+        developer: "Blizzard Entertainment",
+        image: "/images/warcraft3.jpg",
+        logo: "/images/warcraft3_logo.png",
+        genre: "Real Time Strategy",
+        alt: "warcraft 3",
+        link: "game-articles/warcraft3.html"
+    },
+    {
+        name: "Grand Theft Auto V",
+        developer: "Rockstar",
+        image: "/images/gtav.jpg",
+        logo: "/images/gtav_logo.png",
+        genre: "RPG",
+        alt: "gta v",
+        link: "game-articles/gtav.html"
+    },
+    {
+        name: "Pet Party",
+        developer: "Exient Entertainment",
+        image: "/images/petparty.jpg",
+        logo: "/images/petparty_logo.png",
+        genre: "Simulation",
+        alt: "pet party",
+        link: "game-articles/petparty.html"
+    },
+    {
+        name: "Hollow Knight",
+        developer: "Team Cherry",
+        image: "/images/hollowknight.jpg",
+        logo: "/images/hollowknight_logo.png",
+        genre: "Action Adventure",
+        alt: "hollow knight",
+        link: "game-articles/hollowknight.html"
+    },
+    {
+        name: "Bloons TD",
+        developer: "Ninja Kiwi",
+        image: "/images/bloonstd.jpg",
+        logo: "/images/bloonstd_logo.png",
+        genre: "Tower Defense",
+        alt: "bloons td",
+        link: "game-articles/bloonstd.html"
+    },
+    {
+        name: "Assasin's Creed Black Flag",
+        developer: "Ubisoft",
+        image: "/images/blackflag.jpg",
+        logo: "/images/blackflag_logo.png",
+        genre: "Action RPG",
+        alt: "black flag",
+        link: "game-articles/blackflag.html"
+    },
+    {
+        name: "Genshin Impact",
+        developer: "HoYoverse",
+        image: "/images/genshin.jpg",
+        logo: "/images/genshin_logo.png",
+        genre: "Action RPG",
+        alt: "genshin impact",
+        link: "game-articles/genshin.html"
+    },
+    {
+        name: "Apex Legends",
+        developer: "Electronic Arts",
+        image: "/images/apex.jpg",
+        logo: "/images/apex_logo.png",
+        genre: "First Person Shooter",
+        alt: "apex legends",
+        link: "game-articles/apex.html"
     }
 ];
 
