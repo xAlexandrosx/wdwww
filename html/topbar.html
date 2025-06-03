@@ -1,16 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 <div class="topbar">
 
-    <form id="searchForm" class="group">
-        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-            <g>
-                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"/>
-            </g>
-        </svg>
-        <label>
-            <input placeholder="Search" type="search" class="input" id="searchInput">
-        </label>
-    </form>
+    <a href="/wdwww/html/index.html" class="button" data-text="Awesome">
+        <span class="actual-text">&nbsp;Home&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Home&nbsp;</span>
+    </a>
 
+    <div class="search-box">
+        <div class="row">
+            <label for="input-box"></label><input type="text" id="input-box" placeholder="Search Games" autocomplete="off">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="result-box">
+        </div>
+    </div>
 
     <label class="switch">
         <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
@@ -18,101 +29,129 @@
         <input type="checkbox" class="input">
         <span class="slider"></span>
     </label>
-
-    <a href="/wdwww/html/index.html" class="button" data-text="Awesome">
-        <span class="actual-text">&nbsp;Home&nbsp;</span>
-        <span aria-hidden="true" class="hover-text">&nbsp;Home&nbsp;</span>
-    </a>
 </div>
 
 <script>
-    document.getElementById("searchForm").addEventListener("submit", function(event) {
-        event.preventDefault();
+    const inputBox = document.getElementById("input-box");
+    const resultsBox = document.querySelector(".result-box");
 
-        const input = document.getElementById("searchInput").value.trim().toLowerCase();
+    const availableKeywords = [
+        'League of Legends',
+        'Counter Strike Global Offensive',
+        "Assasin's Creed",
+        "Cyberpunk 2077",
+        "Don't Starve Together",
+        "Fortnite",
+        "Hearthstone",
+        "Magit the Gathering Arena",
+        "Minecraft",
+        "Overwatch",
+        "The Sims 4",
+        "The Binding of Isaac",
+        "The Witcher 3",
+        "Valorant",
+        "World of Warcraft",
+    ];
 
-        const pages = {
-            "assasin's creed 1": "/wdwww/html/game-articles/assasinscreed1.html",
-            "assasin's creed": "/wdwww/html/game-articles/assasinscreed1.html",
-            "assasins creed 1": "/wdwww/html/game-articles/assasinscreed1.html",
-            "assasins creed": "/wdwww/html/game-articles/assasinscreed1.html",
-            "assasin": "/wdwww/html/game-articles/assasinscreed1.html",
-            "assasin 1": "/wdwww/html/game-articles/assasinscreed1.html",
-            "ac": "/wdwww/html/game-articles/assasinscreed1.html",
-            "ac1": "/wdwww/html/game-articles/assasinscreed1.html",
+    const pageMap = {
+        "League of Legends": "/wdwww/html/game-articles/leagueoflegends.html",
+        "Counter Strike Global Offensive": "/wdwww/html/game-articles/csgo.html",
+        "Assasin's Creed": "/wdwww/html/game-articles/assasinscreed1.html",
+        "Cyberpunk 2077": "/wdwww/html/game-articles/cyberpunk77.html",
+        "Don't Starve Together": "/wdwww/html/game-articles/dontstarvetogether.html",
+        "Fortnite": "/wdwww/html/game-articles/fortnite.html",
+        "Hearthstone": "/wdwww/html/game-articles/hearthstone.html",
+        "Magit the Gathering Arena": "/wdwww/html/game-articles/mtg.html",
+        "Minecraft": "/wdwww/html/game-articles/minecraft.html",
+        "Overwatch": "/wdwww/html/game-articles/overwatch.html",
+        "The Sims 4": "/wdwww/html/game-articles/sims4.html",
+        "The Binding of Isaac": "/wdwww/html/game-articles/bindingofisaac.html",
+        "The Witcher 3": "/wdwww/html/game-articles/witcher3.html",
+        "Valorant": "/wdwww/html/game-articles/valorant.html",
+        "World of Warcraft": "/wdwww/html/game-articles/wow.html"
+    };
 
-            "the binding of isaac": "/wdwww/html/game-articles/bindingofisaac.html",
-            "binding of isaac": "/wdwww/html/game-articles/bindingofisaac.html",
-            "binding of isac": "/wdwww/html/game-articles/bindingofisaac.html",
-            "the binding of isac": "/wdwww/html/game-articles/bindingofisaac.html",
-            "isaac": "/wdwww/html/game-articles/bindingofisaac.html",
-            "isac": "/wdwww/html/game-articles/bindingofisaac.html",
-            "tboi": "/wdwww/html/game-articles/bindingofisaac.html",
-            "boi": "/wdwww/html/game-articles/bindingofisaac.html",
+    let selectedIndex = -1;
+    let currentResults = [];
 
-            "counter strike global offensive": "/wdwww/html/game-articles/csgo.html",
-            "counter strike go": "/wdwww/html/game-articles/csgo.html",
-            "counter strike": "/wdwww/html/game-articles/csgo.html",
-            "cs global offensive": "/wdwww/html/game-articles/csgo.html",
-            "cs go": "/wdwww/html/game-articles/csgo.html",
-            "csgo": "/wdwww/html/game-articles/csgo.html",
-            "cs": "/wdwww/html/game-articles/csgo.html",
-
-            "cyberpunk 77": "/wdwww/html/game-articles/cyberpunk77.html",
-            "cyberpunk77": "/wdwww/html/game-articles/cyberpunk77.html",
-            "cyberpunk": "/wdwww/html/game-articles/cyberpunk77.html",
-            "cp 77": "/wdwww/html/game-articles/cyberpunk77.html",
-            "cp77": "/wdwww/html/game-articles/cyberpunk77.html",
-            "cp": "/wdwww/html/game-articles/cyberpunk77.html",
-
-            "don't starve together": "/wdwww/html/game-articles/dontstarvetogether.html",
-            "dont starve together": "/wdwww/html/game-articles/dontstarvetogether.html",
-            "dont starve": "/wdwww/html/game-articles/dontstarvetogether.html",
-            "don't starve": "/wdwww/html/game-articles/dontstarvetogether.html",
-            "dst": "/wdwww/html/game-articles/dontstarvetogether.html",
-
-            "fortnite": "/wdwww/html/game-articles/fortnite.html",
-            "fn": "/wdwww/html/game-articles/fortnite.html",
-
-            "hearthstone": "/wdwww/html/game-articles/hearthstone.html",
-            "hs": "/wdwww/html/game-articles/hearthstone.html",
-
-            "minecraft": "/wdwww/html/game-articles/minecraft.html",
-            "mc": "/wdwww/html/game-articles/minecraft.html",
-
-            "magic the gathering": "/wdwww/html/game-articles/mtg.html",
-            "magic": "/wdwww/html/game-articles/mtg.html",
-            "mtg": "/wdwww/html/game-articles/mtg.html",
-
-            "overwatch": "/wdwww/html/game-articles/overwatch.html",
-            "ow": "/wdwww/html/game-articles/overwatch.html",
-
-            "the sims 4": "/wdwww/html/game-articles/sims4.html",
-            "sims 4": "/wdwww/html/game-articles/sims4.html",
-            "sims4": "/wdwww/html/game-articles/sims4.html",
-            "sims": "/wdwww/html/game-articles/sims4.html",
-            "ts4": "/wdwww/html/game-articles/sims4.html",
-
-            "the witcher 3": "/wdwww/html/game-articles/witcher3.html",
-            "witcher 3": "/wdwww/html/game-articles/witcher3.html",
-            "witcher3": "/wdwww/html/game-articles/witcher3.html",
-            "w3": "/wdwww/html/game-articles/witcher3.html",
-
-            "league of legends": "/wdwww/html/game-articles/leagueoflegends.html",
-            "league": "/wdwww/html/game-articles/leagueoflegends.html",
-            "lol": "/wdwww/html/game-articles/leagueoflegends.html",
-
-            "valorant": "/wdwww/html/game-articles/valorant.html",
-            "valo": "/wdwww/html/game-articles/valorant.html",
-
-            "world of warcraft": "/wdwww/html/game-articles/wow.html",
-            "wow": "/wdwww/html/game-articles/wow.html",
-        };
-
-        if (pages[input]) {
-            window.location.href = pages[input];
-        } else {
-            alert("Game not found.");
+    inputBox.addEventListener("keyup", function (e) {
+        if (e.key === "ArrowDown") {
+            if (selectedIndex < currentResults.length - 1) {
+                selectedIndex++;
+                updateHighlight();
+            }
+            return;
         }
+        if (e.key === "ArrowUp") {
+            if (selectedIndex > 0) {
+                selectedIndex--;
+                updateHighlight();
+            }
+            return;
+        }
+        if (e.key === "Enter") {
+            let selectedText;
+            if (selectedIndex >= 0 && selectedIndex < currentResults.length) {
+                selectedText = currentResults[selectedIndex];
+            } else {
+                selectedText = inputBox.value;
+            }
+
+            if (pageMap[selectedText]) {
+                window.location.href = pageMap[selectedText];
+            } else {
+                alert("No matching page found.");
+            }
+            return;
+        }
+
+        // Default input handler
+        let input = inputBox.value;
+        selectedIndex = -1;
+        if (input.length) {
+            currentResults = availableKeywords.filter((keyword) =>
+                keyword.toLowerCase().includes(input.toLowerCase())
+            );
+        } else {
+            currentResults = [];
+        }
+        display(currentResults);
     });
+
+    function display(results) {
+        if (results.length === 0) {
+            clearSuggestions();
+            return;
+        }
+
+        const content = results
+            .map((item, index) => `<li data-index="${index}">${item}</li>`)
+            .join("");
+        resultsBox.innerHTML = `<ul>${content}</ul>`;
+
+        document.querySelectorAll(".result-box li").forEach((li) => {
+            li.addEventListener("click", () => {
+                inputBox.value = li.textContent;
+                clearSuggestions();
+                if (pageMap[li.textContent]) {
+                    window.location.href = pageMap[li.textContent];
+                }
+            });
+        });
+    }
+
+    function updateHighlight() {
+        const listItems = document.querySelectorAll(".result-box li");
+        listItems.forEach((item, index) => {
+            item.style.backgroundColor = index === selectedIndex ? "#eee" : "#fff";
+        });
+    }
+
+    function clearSuggestions() {
+        resultsBox.innerHTML = "";
+        currentResults = [];
+        selectedIndex = -1;
+    }
 </script>
+</body>
+</html>
