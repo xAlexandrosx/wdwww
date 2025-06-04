@@ -16,7 +16,7 @@
 
     <div class="search-box">
         <div class="row">
-            <label for="input-box"></label><input type="text" id="input-box" placeholder="Search Games" autocomplete="off">
+            <label for="input-box"></label><input type="text" id="input-box" placeholder="Search Games, developers, genres..." autocomplete="off">
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="result-box">
@@ -37,7 +37,6 @@
 
     const availableKeywords = [
         'League of Legends',
-        'LoL',
         'Counter Strike Global Offensive',
         "Assasin's Creed",
         "Cyberpunk 2077",
@@ -61,14 +60,31 @@
         "Hollow Knight",
         "Bloons TD",
         "Assasin's Creed Black Flag",
-        "Black Flag",
         "Genshin Impact",
         "Apex Legends",
+        "Cities Skylines",
+        "Starcraft 2",
+        "Gwent",
+        "Terraria",
+        "Slay the Spire",
+        "Balatro",
+        "Darkest Dungeon",
+        "Rainbow Six Siege",
+        "Kingdom Rush",
+        "Riot Games",
+        "Valve",
+        "Ubisoft",
+        "Klei Entertainment",
+        "Blizzard Entertainment",
+        "Rockstar",
+        "Mojang Studios",
+        "CD Projekt RED",
+        "Epic Games",
+        "Assasin's Creed 2",
     ];
 
     const pageMap = {
         "League of Legends": "/wdwww/html/game-articles/leagueoflegends.html",
-        "LoL": "/wdwww/html/game-articles/leagueoflegends.html",
         "Counter Strike Global Offensive": "/wdwww/html/game-articles/csgo.html",
         "Assasin's Creed": "/wdwww/html/game-articles/assasinscreed1.html",
         "Cyberpunk 2077": "/wdwww/html/game-articles/cyberpunk77.html",
@@ -92,9 +108,28 @@
         "Hollow Knight": "/wdwww/html/game-articles/hollowknight.html",
         "Bloons TD": "/wdwww/html/game-articles/bloonstd.html",
         "Assasin's Creed Black Flag": "/wdwww/html/game-articles/blackflag.html",
-        "Black Flag": "/wdwww/html/game-articles/blackflag.html",
         "Genshin Impact": "/wdwww/html/game-articles/genshin.html",
         "Apex Legends": "/wdwww/html/game-articles/apex.html",
+        "Cities Skylines": "/wdwww/html/game-articles/skylines.html",
+        "Starcraft 2": "/wdwww/html/game-articles/sc2.html",
+        "Gwent": "/wdwww/html/game-articles/gwent.html",
+        "Terraria": "/wdwww/html/game-articles/terraria.html",
+        "Slay the Spire": "/wdwww/html/game-articles/slaythespire.html",
+        "Balatro": "/wdwww/html/game-articles/balatro.html",
+        "Darkest Dungeon": "/wdwww/html/game-articles/darkestdungeon.html",
+        "Rainbow Six Siege": "/wdwww/html/game-articles/rainbowsix.html",
+        "Kingdom Rush": "/wdwww/html/game-articles/kingdomrush.html",
+        "Assasin's Creed 2": "/wdwww/html/game-articles/ac2.html",
+
+        "Blizzard Entertainment": "/wdwww/html/game-articles/developers/blizzard.html",
+        "CD Projekt RED": "/wdwww/html/game-articles/developers/cdprojekt.html",
+        "Epic Games": "/wdwww/html/game-articles/developers/epic.html",
+        "Klei Entertainment": "/wdwww/html/game-articles/developers/klei.html",
+        "Rockstar": "/wdwww/html/game-articles/developers/rockstar.html",
+        "Riot Games": "/wdwww/html/game-articles/developers/riotgames.html",
+        "Valve": "/wdwww/html/game-articles/developers/valve.html",
+        "Ubisoft": "/wdwww/html/game-articles/developers/ubisoft.html",
+        "Mojang Studios": "/wdwww/html/game-articles/developers/mojang.html",
     };
 
     let selectedIndex = -1;

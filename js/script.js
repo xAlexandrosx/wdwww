@@ -29,6 +29,7 @@ const games = [
         image: "/images/league.jpg",
         logo: "/images/league_logo.png",
         genre: "Team based MOBA",
+        tags: ["Multiplayer", "Online", "Competitive", "MOBA", "Esports", "Team-based"],
         alt: "league of legends",
         link: "game-articles/leagueoflegends.html"
     },
@@ -38,6 +39,7 @@ const games = [
         image: "/images/csgo.jpg",
         logo: "/images/csgo_logo.png",
         genre: "First-person shooter",
+        tags: ["Multiplayer", "Online", "Shooter", "First Person", "Competitive", "Tactical", "Esports"],
         alt: "cs go",
         link: "game-articles/csgo.html"
     },
@@ -46,7 +48,8 @@ const games = [
         developer: "Mojang",
         image: "/images/Minecraft.jpg",
         logo: "/images/MinecraftLogo.png",
-        genre: "Sandbox Adventure",
+        genre: "Sandbox",
+        tags: ["Sandbox", "Survival", "Creative", "First Person", "Open-world", "Multiplayer", "Adventure", "Crafting"],
         alt: "minecraft",
         link: "game-articles/minecraft.html"
     },
@@ -56,6 +59,7 @@ const games = [
         image: "/images/Isaac.jpg",
         logo: "/images/IsaacLogo.png",
         genre: "Roguelike",
+        tags: ["Roguelike", "Indie", "Singleplayer", "Dark", "Dungeon Crawler"],
         alt: "The Binding of Isaac",
         link: "game-articles/bindingofisaac.html"
     },
@@ -65,6 +69,7 @@ const games = [
         image: "/images/Witcher3.jpg",
         logo: "/images/Witcher3Logo.png",
         genre: "Action RPG",
+        tags: ["RPG", "Story-rich", "Singleplayer", "Fantasy", "Open-world", "Action"],
         alt: "Witcher 3",
         link: "game-articles/witcher3.html"
     },
@@ -74,6 +79,7 @@ const games = [
         image: "/images/WoW.jpg",
         logo: "/images/WOWlogo.png",
         genre: "MMO RPG",
+        tags: ["RPG", "Story-rich", "Multiplayer", "Online", "Fantasy", "Open-world", "MMORPG", "Co-op"],
         alt: "WoW",
         link: "game-articles/wow.html"
     },
@@ -83,6 +89,7 @@ const games = [
         image: "/images/Hearthstone.jpg",
         logo: "/images/Hearthstone-Logo-1.png",
         genre: "Trading Card Game",
+        tags: ["Card Game", "Online", "Turn-based", "Strategy", "Fantasy", "Multiplayer"],
         alt: "hs",
         link: "game-articles/hearthstone.html"
     },
@@ -92,6 +99,7 @@ const games = [
         image: "/images/MtG.jpg",
         logo: "/images/MtG_logo.png",
         genre: "Trading Card Game",
+        tags: ["Card Game", "Fantasy", "Strategy", "Multiplayer", "Tabletop", "Competitive"],
         alt: "MtG",
         link: "game-articles/mtg.html"
     },
@@ -101,6 +109,7 @@ const games = [
         image: "/images/Assasins.jpg",
         logo: "/images/Assasins_logo.png",
         genre: "Action RPG",
+        tags: ["Action", "RPG", "Open-world", "Stealth", "Story-rich", "Singleplayer", "Historical"],
         alt: "AC",
         link: "game-articles/assasinscreed1.html"
     },
@@ -110,6 +119,7 @@ const games = [
         image: "/images/Cyberpunk.jpg",
         logo: "/images/Cyberpunk_logo.png",
         genre: "FPS RPG",
+        tags: ["RPG", "Shooter", "Open-world", "Sci-fi", "Story-rich", "First Person", "Singleplayer"],
         alt: "Cyberpunk",
         link: "game-articles/cyberpunk77.html"
     },
@@ -119,6 +129,7 @@ const games = [
         image: "/images/DST.jpg",
         logo: "/images/DST_Logo.png",
         genre: "Survival",
+        tags: ["Survival", "Multiplayer", "Co-op", "Crafting", "Dark", "Indie", "Open-world"],
         alt: "DST",
         link: "game-articles/dontstarvetogether.html"
     },
@@ -128,6 +139,7 @@ const games = [
         image: "/images/Fortnite.jpg",
         logo: "/images/Fortnite-Logo.png",
         genre: "Battle Royale",
+        tags: ["Multiplayer", "Online", "Shooter", "Battle Royale", "Building", "Third Person", "Co-op"],
         alt: "fortnite",
         link: "game-articles/fortnite.html"
     },
@@ -137,6 +149,7 @@ const games = [
         image: "/images/Overwatch.jpg",
         logo: "/images/overwatch_logo.png",
         genre: "Hero Shooter",
+        tags: ["Shooter", "Multiplayer", "Online", "First Person", "Team-based", "Hero-based", "Esports"],
         alt: "ov",
         link: "game-articles/overwatch.html"
     },
@@ -145,7 +158,8 @@ const games = [
         developer: "EA",
         image: "/images/Sims4.jpg",
         logo: "/images/Sims_4_logo.png",
-        genre: "simulator",
+        genre: "Simulator",
+        tags: ["Simulation", "Life Sim", "Singleplayer", "Creative", "Casual"],
         alt: "sims",
         link: "game-articles/sims4.html"
     },
@@ -155,6 +169,7 @@ const games = [
         image: "/images/Valorant.jpg",
         logo: "/images/Valorant_logo.png",
         genre: "First-person shooter",
+        tags: ["Shooter", "Multiplayer", "Online", "First Person", "Competitive", "Esports", "Tactical"],
         alt: "valorant",
         link: "game-articles/valorant.html"
     },
@@ -164,6 +179,7 @@ const games = [
         image: "/images/Heartbound.jpg",
         logo: "/images/heartbound_logo.png",
         genre: "RPG Adventure",
+        tags: ["RPG", "Adventure", "Indie", "Story-rich", "Pixel Art", "Singleplayer"],
         alt: "heartbound",
         link: "game-articles/heartbound.html"
     },
@@ -173,6 +189,7 @@ const games = [
         image: "/images/dota2.jpg",
         logo: "/images/dota2_logo.png",
         genre: "Team based MOBA",
+        tags: ["Multiplayer", "Online", "MOBA", "Esports", "Strategy", "Team-based"],
         alt: "dota 2",
         link: "game-articles/dota2.html"
     },
@@ -182,6 +199,7 @@ const games = [
         image: "/images/warcraft3.jpg",
         logo: "/images/warcraft3_logo.png",
         genre: "Real Time Strategy",
+        tags: ["RTS", "Fantasy", "Strategy", "Multiplayer", "Campaign", "Classic"],
         alt: "warcraft 3",
         link: "game-articles/warcraft3.html"
     },
@@ -191,6 +209,7 @@ const games = [
         image: "/images/gtav.jpg",
         logo: "/images/gtav_logo.png",
         genre: "RPG",
+        tags: ["Open-world", "Action", "Multiplayer", "Story-rich", "Crime", "Third Person"],
         alt: "gta v",
         link: "game-articles/gtav.html"
     },
@@ -200,6 +219,7 @@ const games = [
         image: "/images/petparty.jpg",
         logo: "/images/petparty_logo.png",
         genre: "Simulation",
+        tags: ["Simulation", "Casual", "Kids", "Multiplayer", "Social"],
         alt: "pet party",
         link: "game-articles/petparty.html"
     },
@@ -209,6 +229,7 @@ const games = [
         image: "/images/hollowknight.jpg",
         logo: "/images/hollowknight_logo.png",
         genre: "Action Adventure",
+        tags: ["Indie", "Action", "Platformer", "Singleplayer", "Challenging"],
         alt: "hollow knight",
         link: "game-articles/hollowknight.html"
     },
@@ -218,6 +239,7 @@ const games = [
         image: "/images/bloonstd.jpg",
         logo: "/images/bloonstd_logo.png",
         genre: "Tower Defense",
+        tags: ["Tower Defense", "Strategy", "Singleplayer", "Kids", "Casual"],
         alt: "bloons td",
         link: "game-articles/bloonstd.html"
     },
@@ -227,6 +249,7 @@ const games = [
         image: "/images/blackflag.jpg",
         logo: "/images/blackflag_logo.png",
         genre: "Action RPG",
+        tags: ["Action", "RPG", "Story-rich", "Open-world", "Stealth", "Historical"],
         alt: "black flag",
         link: "game-articles/blackflag.html"
     },
@@ -236,6 +259,7 @@ const games = [
         image: "/images/genshin.jpg",
         logo: "/images/genshin_logo.png",
         genre: "Action RPG",
+        tags: ["Action", "RPG", "Open-world", "Anime", "Multiplayer", "Fantasy"],
         alt: "genshin impact",
         link: "game-articles/genshin.html"
     },
@@ -245,8 +269,109 @@ const games = [
         image: "/images/apex.jpg",
         logo: "/images/apex_logo.png",
         genre: "First Person Shooter",
+        tags: ["Shooter", "Battle Royale", "Multiplayer", "First Person", "Online", "Team-based"],
         alt: "apex legends",
         link: "game-articles/apex.html"
+    },
+    {
+        name: "City Skylines",
+        developer: "Paradox Interactive",
+        image: "/images/skylines.jpg",
+        logo: "/images/skylines_logo.png",
+        genre: "Simulation",
+        tags: ["Simulation", "City Builder", "Strategy", "Singleplayer", "Creative"],
+        alt: "city skylines",
+        link: "game-articles/skylines.html"
+    },
+    {
+        name: "Starcraft 2",
+        developer: "Blizzard Entertainment",
+        image: "/images/sc2.jpg",
+        logo: "/images/sc2_logo.png",
+        genre: "Real Time Strategy",
+        tags: ["RTS", "Sci-fi", "Multiplayer", "Strategy", "Campaign", "Esports"],
+        alt: "starcraft 2",
+        link: "game-articles/sc2.html"
+    },
+    {
+        name: "Gwent",
+        developer: "CD Project Red",
+        image: "/images/gwent.jpg",
+        logo: "/images/gwent_logo.png",
+        genre: "Trading Card Game",
+        tags: ["Card Game", "Fantasy", "Multiplayer", "Strategy", "Online"],
+        alt: "gwent",
+        link: "game-articles/gwent.html"
+    },
+    {
+        name: "Terraria",
+        developer: "Re-Logic",
+        image: "/images/terraria.jpg",
+        logo: "/images/terraria_logo.png",
+        genre: "Sandbox Adventure",
+        tags: ["Sandbox", "Adventure", "Survival", "Pixel Art", "Co-op", "Crafting", "Multiplayer"],
+        alt: "terraria",
+        link: "game-articles/terraria.html"
+    },
+    {
+        name: "Slay the Spire",
+        developer: "MegaCrit",
+        image: "/images/slaythespire.jpg",
+        logo: "/images/slaythespire_logo.png",
+        genre: "Roguelike",
+        tags: ["Card Game", "Roguelike", "Strategy", "Turn-based", "Indie", "Singleplayer"],
+        alt: "Slay the Spire",
+        link: "game-articles/slaythespire.html"
+    },
+    {
+        name: "Balatro",
+        developer: "LocalThunk",
+        image: "/images/balatro.jpg",
+        logo: "/images/balatro_logo.png",
+        genre: "Card Game",
+        tags: ["Card Game", "Roguelike", "Strategy", "Indie", "Singleplayer"],
+        alt: "balatro",
+        link: "game-articles/balatro.html"
+    },
+    {
+        name: "Darkest Dungeon",
+        developer: "Red Hook Studios",
+        image: "/images/darkestdungeon.jpg",
+        logo: "/images/darkestdungeon_logo.png",
+        genre: "Roguelike",
+        tags: ["Roguelike", "Turn-based", "Dark", "Challenging", "Strategy", "Party-based", "Singleplayer"],
+        alt: "darkest dungeon",
+        link: "game-articles/darkestdungeon.html"
+    },
+    {
+        name: "Rainbow Six Siege",
+        developer: "Ubisoft",
+        image: "/images/rainbowsix.jpg",
+        logo: "/images/rainbowsix_logo.png",
+        genre: "Tactical Shooter",
+        tags: ["Multiplayer", "Online", "Shooter", "Tactical", "First Person", "Team-based", "Competitive"],
+        alt: "rainbow six siege",
+        link: "game-articles/rainbowsixsiege.html"
+    },
+    {
+        name: "Kingdom Rush",
+        developer: "Ironhide",
+        image: "/images/kingdomrush.jpg",
+        logo: "/images/kingdomrush_logo.png",
+        genre: "Tower Defense",
+        tags: ["Casual", "Singleplayer", "Tower Defence", "Strategy", "Fantasy"],
+        alt: "kingdom rush",
+        link: "game-articles/kingdomrush.html"
+    },
+    {
+        name: "Assasin's Creed 2",
+        developer: "Ubisoft",
+        image: "/images/ac2.jpg",
+        logo: "/images/ac2_logo.png",
+        genre: "Action RPG",
+        tags: ["Action", "RPG", "Open-world", "Stealth", "Story-rich", "Singleplayer", "Historical"],
+        alt: "assasin's creed 2",
+        link: "game-articles/ac2.html"
     }
 ];
 

@@ -1,5 +1,6 @@
 /* Topbar */
 .topbar {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -8,19 +9,18 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* <- distributes space between items */
-    padding: 0 30px; /* optional: adds spacing on left/right edges */
+    justify-content: space-between;
+    padding: 0 30px;
     z-index: 1000;
 }
-
 
 /* Search Field */
 .search-box {
     width: 400px;
     background: #fff;
     border-radius: 5px;
-    position: relative; /* 👈 Add this */
-    z-index: 10; /* optional, helps bring it up */
+    position: relative;
+    z-index: 10;
 }
 
 

@@ -1,13 +1,11 @@
 Games to add
 
-starcraft 2
-rainbow six edge
-gwent
-assasins creed 2, 3, unity, syndicate, origins, odyssey, valhalla
+AC 2, 3, unity, syndicate, origins, odyssey, valhalla
 final fantasy XIV
-baloons td
-kingdom rush
-balatro
-slay the spire
-cities skylines
-terraria
+legends of runeterra
+wild rift
+dark souls
+bloodborne
+elden ring
+red dead redemption 2
+gta san andreas

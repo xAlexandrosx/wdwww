@@ -5,6 +5,7 @@
 }
 
 html, body {
+    padding-top: 30px; /* Match the height of the topbar */
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
@@ -215,6 +216,86 @@ body.genshin-article {
 
 body.apex-article {
     background-image: url('../images/apex_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.skylines-article {
+    background-image: url('../images/skylines.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.sc2-article {
+    background-image: url('../images/sc2_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.gwent-article {
+    background-image: url('../images/gwent_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.terraria-article {
+    background-image: url('../images/terraria_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.slaythespire-article {
+    background-image: url('../images/slaythespire_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.balatro-article {
+    background-image: url('../images/balatro_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.darkestdungeon-article {
+    background-image: url('../images/darkestdungeon_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.rainbowsix-article {
+    background-image: url('../images/rainbowsix_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.kingdomrush-article {
+    background-image: url('../images/kingdomrush_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.ac2-article {
+    background-image: url('../images/ac2_background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
