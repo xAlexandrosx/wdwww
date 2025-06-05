@@ -1,5 +1,7 @@
-Games to add
+Rzeczy do zrobienia:
+1. Landing page
+2. logowanie użytkownika
+3. filtrowanie
 
-no mans sky
-age of empires 2
-kingdom come deliverance
+ja już najpewniej nic nie będę robił z tym projektem bo się zapędziłem i spędziłem tu za dużo czasu.
+Myślę że po weekendzie zrobię refactoring kodu, porządki w plikach itd.
