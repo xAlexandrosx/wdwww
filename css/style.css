@@ -22,292 +22,221 @@ body.main-page {
     background-size: 55px 55px;
 }
 
-body.lol-article {
-    background-image: url('../images/lolbackground.jpg');
+.recommendation-section {
+    margin: 2rem 1rem;
+}
+
+.recommendation-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.recommendation-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body[class$='-article'] {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+/* Individual background images */
+body.lol-article {
+    background-image: url('../images/lolbackground.jpg');
 }
 
 body.dst-article {
     background-image: url('../images/dstbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.ac-article {
     background-image: url('../images/ac1background.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.isaac-article {
     background-image: url('../images/tboibackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.csgo-article {
     background-image: url('../images/csgobackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.cyberpunk-article {
     background-image: url('../images/cyberpunkbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.fortnite-article {
     background-image: url('../images/fortnitebackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.hearthstone-article {
     background-image: url('../images/hearhtstonebackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.minecraft-article {
     background-image: url('../images/minecraftbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.mtga-article {
     background-image: url('../images/mtgbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.overwatch-article {
     background-image: url('../images/overwatchbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.sims-article {
     background-image: url('../images/sims4background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.valorant-article {
     background-image: url('../images/valorantbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.witcher-article {
     background-image: url('../images/witcher3background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.wow-article {
     background-image: url('../images/wowbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.heartbound-article {
     background-image: url('../images/heartboundbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.dota2-article {
     background-image: url('../images/dota2background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.warcraft3-article {
     background-image: url('../images/warcraft3_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.gtav-article {
     background-image: url('../images/gtav_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.petparty-article {
     background-image: url('../images/petparty_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.hollowknight-article {
     background-image: url('../images/hollowknight_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.bloonstd-article {
     background-image: url('../images/bloonstd_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.blackflag-article {
     background-image: url('../images/blackflag_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.genshin-article {
     background-image: url('../images/genshin_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.apex-article {
     background-image: url('../images/apex_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.skylines-article {
     background-image: url('../images/skylines.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.sc2-article {
     background-image: url('../images/sc2_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.gwent-article {
     background-image: url('../images/gwent_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-body.terraria-article {
-    background-image: url('../images/terraria_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.slaythespire-article {
     background-image: url('../images/slaythespire_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.balatro-article {
     background-image: url('../images/balatro_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.darkestdungeon-article {
     background-image: url('../images/darkestdungeon_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.rainbowsix-article {
     background-image: url('../images/rainbowsix_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.kingdomrush-article {
     background-image: url('../images/kingdomrush_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 body.ac2-article {
     background-image: url('../images/ac2_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
-/* Header at the top */
+body.snowrunner-article {
+    background-image: url('../images/snowrunner_background.jpg');
+}
+
+body.fifa22-article {
+    background-image: url('../images/fifa22_background.jpg');
+}
+
+body.beamng-article {
+    background-image: url('../images/beamng_background.jpg');
+}
+
+body.f1-article {
+    background-image: url('../images/f1_background.jpg');
+}
+
+body.stardewvaley-article {
+    background-image: url('../images/stardewvalley_background.jpg');
+}
+
+body.forza25-article {
+    background-image: url('../images/forza25_background.jpg');
+}
+
+body.marvelsnap-article {
+    background-image: url('../images/marvelsnap_background.jpg');
+}
+
+body.footballmanager24-article {
+    background-image: url('../images/footballmanager24_background.jpg');
+}
+
+body.nba2k25-article {
+    background-image: url('../images/nba2k25_background.jpg');
+}
+
+body.subnautica-articla {
+    background-image: url('../images/subnautica_background.jpg');
+}
+
+body.nomanssky-article {
+    background-image: url('../images/nomanssky_background.jpg');
+}
+
+body.hoi4-article {
+    background-image: url('../images/hoi4_background.jpg');
+}
+
+body.kcd2-article {
+    background-image: url('../images/kcd2_background.jpg');
+}
+
 header {
     flex-shrink: 0;
 }
 
-/* Main content area that grows */
 main {
     flex: 1;
     display: flex;
@@ -544,11 +473,6 @@ main {
     border-radius: 8px;      /* optional: slightly rounded corners */
 }
 
-/* From Uiverse.io by SelfMadeSystem */
-/*
-More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
- */
-
 .container::after {
     content: "";
     position: absolute;
@@ -746,4 +670,168 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 
 .autocomplete-item:hover {
     background-color: #f0f0f0;
+}
+
+/*Game Genre Choice Section*/
+/* From Uiverse.io by WhiteNervosa */
+.customCheckBoxHolder {
+    margin: 5px;
+    display: flex;
+}
+
+.customCheckBox {
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    padding: 2px 8px;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 0px;
+    color: rgba(255, 255, 255, 0.7);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 300ms;
+    transition-property: color, background-color, box-shadow;
+    display: flex;
+    height: 32px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+    outline: none;
+    justify-content: center;
+    min-width: 55px;
+}
+
+.customCheckBox:hover {
+    background-color: #2c2c2c;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+    font-size: 18px;
+    font-weight: 900;
+    pointer-events: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 300ms;
+    transition-property: transform;
+    transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+    transform: translateY(-2px);
+}
+
+/* Multiple Checkboxes can be chained together for a radio input */
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 0px;
+}
+
+.customCheckBoxInput {
+    display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+    background-color: #0099ff;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+    transform: translateY(-2px);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+    background-color: #0099ff;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+    transform: translateY(-2px);
+}
+
+.genre-choice-page {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.genre-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.customCheckBoxHolder {
+    display: inline-block;
+}
+
+.customCheckBoxWrapper {
+    display: inline-block;
+}
+
+.customCheckBox {
+    width: fit-content;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.16);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.customCheckBox:hover {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.customCheckBoxInput {
+    display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+    background-color: #0099ff;
+    color: white;
+}
+
+#submitGenres {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#submitGenres:disabled {
+    background-color: #999;
+    cursor: default;
 }

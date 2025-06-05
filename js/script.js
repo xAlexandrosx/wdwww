@@ -6,21 +6,23 @@ window.addEventListener("DOMContentLoaded", () => {
             if (res.ok) {
                 el.innerHTML = await res.text();
 
-                // If the included file contains any script tags, execute them
                 el.querySelectorAll("script").forEach(oldScript => {
                     const newScript = document.createElement("script");
                     newScript.textContent = oldScript.textContent;
                     document.body.appendChild(newScript);
                 });
 
-                // If it's cards.html, build the cards after insertion
-                if (file.includes("cards.html")) buildCards();
+                if (file.includes("cards.html")) {
+                    buildRecommendations(); // <-- new
+                    buildCards();
+                }
             }
         } catch (err) {
             console.error(`Could not include ${file}:`, err);
         }
     });
 });
+
 
 const games = [
     {
@@ -29,7 +31,7 @@ const games = [
         image: "/images/league.jpg",
         logo: "/images/league_logo.png",
         genre: "Team based MOBA",
-        tags: ["Multiplayer", "Online", "Competitive", "MOBA", "Esports", "Team-based"],
+        tags: ["Multiplayer", "Online", "Competetive", "MOBA", "Esports", "Team-based"],
         alt: "league of legends",
         link: "game-articles/leagueoflegends.html"
     },
@@ -39,7 +41,7 @@ const games = [
         image: "/images/csgo.jpg",
         logo: "/images/csgo_logo.png",
         genre: "First-person shooter",
-        tags: ["Multiplayer", "Online", "Shooter", "First Person", "Competitive", "Tactical", "Esports"],
+        tags: ["Multiplayer", "Online", "Shooter", "First Person", "Competetive", "Tactical", "Esports"],
         alt: "cs go",
         link: "game-articles/csgo.html"
     },
@@ -59,7 +61,7 @@ const games = [
         image: "/images/Isaac.jpg",
         logo: "/images/IsaacLogo.png",
         genre: "Roguelike",
-        tags: ["Roguelike", "Indie", "Singleplayer", "Dark", "Dungeon Crawler"],
+        tags: ["Roguelike", "Indie", "Singleplayer", "Dark", "Dungeon Crawler", "Pixel Art"],
         alt: "The Binding of Isaac",
         link: "game-articles/bindingofisaac.html"
     },
@@ -89,7 +91,7 @@ const games = [
         image: "/images/Hearthstone.jpg",
         logo: "/images/Hearthstone-Logo-1.png",
         genre: "Trading Card Game",
-        tags: ["Card Game", "Online", "Turn-based", "Strategy", "Fantasy", "Multiplayer"],
+        tags: ["Cards", "Online", "Turn-based", "Strategy", "Fantasy", "Multiplayer"],
         alt: "hs",
         link: "game-articles/hearthstone.html"
     },
@@ -99,7 +101,7 @@ const games = [
         image: "/images/MtG.jpg",
         logo: "/images/MtG_logo.png",
         genre: "Trading Card Game",
-        tags: ["Card Game", "Fantasy", "Strategy", "Multiplayer", "Tabletop", "Competitive"],
+        tags: ["Cards", "Fantasy", "Strategy", "Multiplayer", "Tabletop", "Competitive"],
         alt: "MtG",
         link: "game-articles/mtg.html"
     },
@@ -129,7 +131,7 @@ const games = [
         image: "/images/DST.jpg",
         logo: "/images/DST_Logo.png",
         genre: "Survival",
-        tags: ["Survival", "Multiplayer", "Co-op", "Crafting", "Dark", "Indie", "Open-world"],
+        tags: ["Survival", "Multiplayer", "Co-op", "Crafting", "Dark", "Indie", "Open-world", "Roguelike"],
         alt: "DST",
         link: "game-articles/dontstarvetogether.html"
     },
@@ -149,7 +151,7 @@ const games = [
         image: "/images/Overwatch.jpg",
         logo: "/images/overwatch_logo.png",
         genre: "Hero Shooter",
-        tags: ["Shooter", "Multiplayer", "Online", "First Person", "Team-based", "Hero-based", "Esports"],
+        tags: ["Shooter", "Multiplayer", "Online", "First Person", "Team-based", "Hero-based", "Competetive", "Sci-fi"],
         alt: "ov",
         link: "game-articles/overwatch.html"
     },
@@ -159,7 +161,7 @@ const games = [
         image: "/images/Sims4.jpg",
         logo: "/images/Sims_4_logo.png",
         genre: "Simulator",
-        tags: ["Simulation", "Life Sim", "Singleplayer", "Creative", "Casual"],
+        tags: ["Simulator", "Singleplayer", "Creative", "Casual"],
         alt: "sims",
         link: "game-articles/sims4.html"
     },
@@ -169,7 +171,7 @@ const games = [
         image: "/images/Valorant.jpg",
         logo: "/images/Valorant_logo.png",
         genre: "First-person shooter",
-        tags: ["Shooter", "Multiplayer", "Online", "First Person", "Competitive", "Esports", "Tactical"],
+        tags: ["Shooter", "Multiplayer", "Online", "First Person", "Competetive", "Tactical"],
         alt: "valorant",
         link: "game-articles/valorant.html"
     },
@@ -189,7 +191,7 @@ const games = [
         image: "/images/dota2.jpg",
         logo: "/images/dota2_logo.png",
         genre: "Team based MOBA",
-        tags: ["Multiplayer", "Online", "MOBA", "Esports", "Strategy", "Team-based"],
+        tags: ["Multiplayer", "Online", "MOBA", "Competetive", "Team-based"],
         alt: "dota 2",
         link: "game-articles/dota2.html"
     },
@@ -209,7 +211,7 @@ const games = [
         image: "/images/gtav.jpg",
         logo: "/images/gtav_logo.png",
         genre: "RPG",
-        tags: ["Open-world", "Action", "Multiplayer", "Story-rich", "Crime", "Third Person"],
+        tags: ["Open-world", "Action", "Multiplayer", "Story-rich", "Crime", "Third Person", "Racing"],
         alt: "gta v",
         link: "game-articles/gtav.html"
     },
@@ -269,7 +271,7 @@ const games = [
         image: "/images/apex.jpg",
         logo: "/images/apex_logo.png",
         genre: "First Person Shooter",
-        tags: ["Shooter", "Battle Royale", "Multiplayer", "First Person", "Online", "Team-based"],
+        tags: ["Shooter", "Battle Royale", "Multiplayer", "First Person", "Online", "Team-based", "Sci-fi"],
         alt: "apex legends",
         link: "game-articles/apex.html"
     },
@@ -279,7 +281,7 @@ const games = [
         image: "/images/skylines.jpg",
         logo: "/images/skylines_logo.png",
         genre: "Simulation",
-        tags: ["Simulation", "City Builder", "Strategy", "Singleplayer", "Creative"],
+        tags: ["Simulator", "City Builder", "Strategy", "Singleplayer", "Creative"],
         alt: "city skylines",
         link: "game-articles/skylines.html"
     },
@@ -289,7 +291,7 @@ const games = [
         image: "/images/sc2.jpg",
         logo: "/images/sc2_logo.png",
         genre: "Real Time Strategy",
-        tags: ["RTS", "Sci-fi", "Multiplayer", "Strategy", "Campaign", "Esports"],
+        tags: ["RTS", "Sci-fi", "Multiplayer", "Strategy", "Campaign", "Competetive"],
         alt: "starcraft 2",
         link: "game-articles/sc2.html"
     },
@@ -299,7 +301,7 @@ const games = [
         image: "/images/gwent.jpg",
         logo: "/images/gwent_logo.png",
         genre: "Trading Card Game",
-        tags: ["Card Game", "Fantasy", "Multiplayer", "Strategy", "Online"],
+        tags: ["Cards", "Fantasy", "Multiplayer", "Strategy", "Online"],
         alt: "gwent",
         link: "game-articles/gwent.html"
     },
@@ -319,7 +321,7 @@ const games = [
         image: "/images/slaythespire.jpg",
         logo: "/images/slaythespire_logo.png",
         genre: "Roguelike",
-        tags: ["Card Game", "Roguelike", "Strategy", "Turn-based", "Indie", "Singleplayer"],
+        tags: ["Cards", "Roguelike", "Strategy", "Turn-based", "Indie", "Singleplayer"],
         alt: "Slay the Spire",
         link: "game-articles/slaythespire.html"
     },
@@ -329,7 +331,7 @@ const games = [
         image: "/images/balatro.jpg",
         logo: "/images/balatro_logo.png",
         genre: "Card Game",
-        tags: ["Card Game", "Roguelike", "Strategy", "Indie", "Singleplayer"],
+        tags: ["Cards", "Roguelike", "Strategy", "Indie", "Singleplayer", "Pixel Art"],
         alt: "balatro",
         link: "game-articles/balatro.html"
     },
@@ -349,7 +351,7 @@ const games = [
         image: "/images/rainbowsix.jpg",
         logo: "/images/rainbowsix_logo.png",
         genre: "Tactical Shooter",
-        tags: ["Multiplayer", "Online", "Shooter", "Tactical", "First Person", "Team-based", "Competitive"],
+        tags: ["Multiplayer", "Online", "Shooter", "Tactical", "First Person", "Team-based", "Competetive"],
         alt: "rainbow six siege",
         link: "game-articles/rainbowsixsiege.html"
     },
@@ -372,6 +374,136 @@ const games = [
         tags: ["Action", "RPG", "Open-world", "Stealth", "Story-rich", "Singleplayer", "Historical"],
         alt: "assasin's creed 2",
         link: "game-articles/ac2.html"
+    },
+    {
+        name: "Snow Runner",
+        developer: "Saber Interactive",
+        image: "/images/snowrunner.jpg",
+        logo: "/images/snowrunner_logo.png",
+        genre: "Simulation",
+        tags: ["Simulator", "Racing", "Open-world", "Sandbox", "Multiplayer", "Adventure"],
+        alt: "snowrunner",
+        link: "game-articles/snowrunner.html"
+    },
+    {
+        name: "Stardew Valley",
+        developer: "ConcernedApe ",
+        image: "/images/stardewvalley.jpg",
+        logo: "/images/stardewvalley_logo.png",
+        genre: "Simulation",
+        tags: ["Simulator", "Multiplayer", "RPG", "Sandbox", "Singleplayer", "Open-world", "Casual", "Pixel Art", "Indie"],
+        alt: "stardew valley",
+        link: "game-articles/stardewvalley.html"
+    },
+    {
+        name: "BeamNG.drive",
+        developer: "BeamNG GmbH ",
+        image: "/images/beamng.jpg",
+        logo: "/images/beamng_logo.png",
+        genre: "Simulation",
+        tags: ["Simulator", "Multiplayer", "Sandbox", "Singleplayer", "Indie", "Racing"],
+        alt: "stardew valley",
+        link: "game-articles/beamng.html"
+    },
+    {
+        name: "Forza Horizaon 25",
+        developer: "Turn 10 Studios",
+        image: "/images/forza25.jpg",
+        logo: "/images/forza25_logo.png",
+        genre: "Simulation",
+        tags: ["Simulator", "Multiplayer", "Singleplayer", "Open-world", "Racing", "Sport"],
+        alt: "forza motorsport",
+        link: "game-articles/forza25.html"
+    },
+    {
+        name: "Marvel Snap",
+        developer: "Second Dinner",
+        image: "/images/marvelsnap.jpg",
+        logo: "/images/marvelsnap_logo.png",
+        genre: "Trading Card Game",
+        tags: ["Cards", "Online", "Turn-based", "Strategy", "Multiplayer"],
+        alt: "marvel snap",
+        link: "game-articles/marvelsnap.html"
+    },
+    {
+        name: "Football Manager 2024",
+        developer: "Sports Interactive",
+        image: "/images/footballmanager24.jpg",
+        logo: "/images/footballmanager24_logo.png",
+        genre: "Simulator",
+        tags: ["Simulator", "Sport", "Strategy", "Multiplayer", "Singleplayer"],
+        alt: "football manager 2024",
+        link: "game-articles/footballmanager24.html"
+    },
+    {
+        name: "Fifa 2022",
+        developer: "EA Sports",
+        image: "/images/fifa22.jpg",
+        logo: "/images/fifa22_logo.png",
+        genre: "Sports Game",
+        tags: ["Simulator", "Sport", "Multiplayer", "Singleplayer", "Competetive"],
+        alt: "fifa 2022",
+        link: "game-articles/fifa22.html"
+    },
+    {
+        name: "F1 25",
+        developer: "EA Sports",
+        image: "/images/f1.jpg",
+        logo: "/images/f1_logo.png",
+        genre: "Sports Game",
+        tags: ["Simulator", "Sport", "Multiplayer", "Racing"],
+        alt: "f1 25",
+        link: "game-articles/f1.html"
+    },
+    {
+        name: "NBA 2k25",
+        developer: "Visual Concepts",
+        image: "/images/nba2k25.jpg",
+        logo: "/images/nba2k25_logo.png",
+        genre: "Sports Game",
+        tags: ["Simulator", "Sport", "Multiplayer", "Singleplayer", "Competetive"],
+        alt: "nba 2k25",
+        link: "game-articles/nba2k25.html"
+    },
+    {
+        name: "Subnautica",
+        developer: "Unknown Worlds Entertainment",
+        image: "/images/subnautica.jpg",
+        logo: "/images/subnautica_logo.png",
+        genre: "Survival",
+        tags: ["Survival", "Singleplayer", "Sandbox", "Multiplayer", "Open-world", "Sci-fi"],
+        alt: "nba 2k25",
+        link: "game-articles/nba2k25.html"
+    },
+    {
+        name: "Kingdom Come Deliverance 2",
+        developer: "Warhorse Studios",
+        image: "/images/kcd2.jpg",
+        logo: "/images/kcd2_logo.png",
+        genre: "RPG",
+        tags: ["RPG", "Singleplayer", "Action", "Historic", "Open-world", "Adventure"],
+        alt: "kingdom come deliverance 2",
+        link: "game-articles/kcd2.html"
+    },
+    {
+        name: "No Man's Sky",
+        developer: "Hello Games",
+        image: "/images/nomanssky.jpg",
+        logo: "/images/nomanssky_logo.png",
+        genre: "Survival",
+        tags: ["Open-world", "Survival", "Sci-fi", "Singleplayer", "Action", "Adventure", "Multiplayer", "Indie"],
+        alt: "no man's sky",
+        link: "game-articles/nomanssky.html"
+    },
+    {
+        name: "Hearts of Iron IV",
+        developer: "Paradox Interactive",
+        image: "/images/hoi4.jpg",
+        logo: "/images/hoi4_logo.png",
+        genre: "RTS",
+        tags: ["Strategic", "Historic", "Singleplayer", "Simulator", "Multiplayer"],
+        alt: "hearts of iron 4",
+        link: "game-articles/hoi4.html"
     }
 ];
 
@@ -408,5 +540,55 @@ function buildCards() {
             </div>
         </div>
         `;
+    });
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function buildRecommendations() {
+    const genres = JSON.parse(localStorage.getItem("selectedGenres") || "[]");
+    const container = document.getElementById("recommendations");
+
+    if (!genres.length || !container) return;
+
+    genres.slice(0, 4).forEach(genre => {
+        const section = document.createElement("section");
+        section.className = "recommendation-section";
+        section.innerHTML = `<h2>Because you like ${genre} games...</h2>`;
+
+        const row = document.createElement("div");
+        row.className = "recommendation-row";
+
+        const matchedGames = games.filter(game => game.tags.includes(genre));
+        shuffleArray(matchedGames);
+        const selectedGames = matchedGames.slice(0, 5);
+
+        selectedGames.forEach(game => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+        <label class="favorite-container">
+            <input type="checkbox" class="favorite-checkbox" />
+            ${starSVG}
+        </label>
+        <a><img class="img" src="${game.image}" alt="${game.alt}" /></a>
+        <div class="textBox">
+            <a href="${game.link}">
+                <img src="${game.logo}" alt="${game.name} Logo" class="game-logo" />
+            </a>
+            <span>by ${game.developer}</span>
+            <p class="text price">${game.genre}</p>
+        </div>
+    `;
+            row.appendChild(card);
+        });
+
+        section.appendChild(row);
+        container.appendChild(section);
     });
 }

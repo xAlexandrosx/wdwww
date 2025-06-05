@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Choose Genre</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/topbar.css" />
+    <script src="../js/script.js" defer></script>
+</head>
+<body class="main-page">
+<header>
+    <div data-include="topbar.html"></div>
+</header>
+
+<main class="genre-choice-page">
+    <h2>Select 4 keywords</h2>
+    <div class="genre-box">
+        <div class="genre-grid" id="genreGrid"></div>
+        <button id="submitGenres" disabled>Submit</button>
+    </div>
+</main>
+
+<footer>
+    <div data-include="footer.html"></div>
+</footer>
+
+<script>
+    const genres = [
+        "Singleplayer", "Multiplayer", "Fantasy", "RPG", "Shooter",
+        "Simulator", "Strategy", "Indie", "Action", "Casual", "Roguelike",
+        "Survival", "Sci-fi", "Competetive", "Cards", "Historical", "Racing",
+        "Pixel Art", "Sports", "Open-world"
+    ];
+
+    genres.sort((a, b) => a.localeCompare(b));
+
+    const grid = document.getElementById('genreGrid');
+    const submitBtn = document.getElementById('submitGenres');
+
+    // Create checkboxes
+    genres.forEach(genre => {
+        const safeId = "genre-" + genre.toLowerCase().replace(/\s+/g, '-');
+        grid.innerHTML += `
+            <div class="customCheckBoxHolder">
+                <input type="checkbox" id="${safeId}" class="customCheckBoxInput" value="${genre}">
+                <label for="${safeId}" class="customCheckBoxWrapper">
+                    <div class="customCheckBox"><div class="inner">${genre}</div></div>
+                </label>
+            </div>
+        `;
+    });
+
+    // Enable button only when 4 genres are selected
+    function updateSubmitButtonState() {
+        const checked = document.querySelectorAll(".customCheckBoxInput:checked");
+        submitBtn.disabled = checked.length !== 4;
+    }
+
+    document.addEventListener("change", updateSubmitButtonState);
+    window.addEventListener("load", updateSubmitButtonState);
+
+    // On submit, store selected genres
+    submitBtn.addEventListener("click", () => {
+        const selectedCheckboxes = document.querySelectorAll(".customCheckBoxInput:checked");
+        const selectedGenresArray = Array.from(selectedCheckboxes).map(cb => cb.value);
+
+        if (selectedGenresArray.length === 4) {
+            localStorage.setItem("selectedGenres", JSON.stringify(selectedGenresArray));
+            window.location.href = "index.html";
+        }
+    });
+</script>
+
+
+</body>
+</html>
