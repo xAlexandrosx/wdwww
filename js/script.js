@@ -15,6 +15,85 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (file.includes("cards.html")) {
                     buildRecommendations(); // <-- new
                     buildCards();
+
+                    filter_genres();
+
+
+                    //favorite
+                    if(sessionStorage.getItem("loggedUser"))
+                    {
+                        document.querySelectorAll(".favorite-checkbox").forEach(checkbox => {
+                        checkbox.addEventListener("change", () => {
+                        const card = checkbox.closest(".card");
+                        const logoImg = card.querySelector(".game-logo");
+
+
+                        const altText = logoImg.alt;
+                        const gameName = altText.replace(" Logo", "");
+                        console.log("Zaznaczono grę:", gameName);
+                        let favorites = JSON.parse(sessionStorage.getItem("favoriteGames") || "[]");
+
+                        if (checkbox.checked) {
+
+                            if (!favorites.includes(gameName)) {
+                            favorites.push(gameName);
+                            }
+                        } 
+                        else {
+                        favorites = favorites.filter(name => name != gameName);
+                        }
+
+                        sessionStorage.setItem("favoriteGames", JSON.stringify(favorites));
+                            });
+                        });
+                    }
+                    
+                }
+
+                //logout_login
+                if (file.includes("topbar.html")) {
+
+
+                    const przycisk = document.getElementById("logout-button");
+                    const przycisk_login = document.getElementById("login-button");
+                    const przycisk_favorite= document.getElementById("favorite-button");
+                    if(sessionStorage.getItem("loggedUser"))
+                    {
+                        przycisk.disabled=false;
+                        przycisk_login.disabled=true;
+                        przycisk_favorite.disabled=false;
+                    }
+                    else
+                    {
+                        przycisk.disabled=true;
+                        przycisk_login.disabled=false;
+                        przycisk_favorite.disabled=true;
+                    }
+
+
+                    
+                    przycisk.addEventListener("click", () =>
+                    {
+                        przycisk.disabled=true;
+                        przycisk_login.disabled=false;
+                        przycisk_favorite.disabled=true;
+                        sessionStorage.removeItem("loggedUser");
+                        sessionStorage.setItem("favoriteGames", "null");
+                    });
+
+
+                    przycisk_login.addEventListener("click", ()=>
+                    {
+                        window.location.href="first.html";
+                    }
+                    );
+
+                    przycisk_favorite.addEventListener("click", () =>
+                    {
+                        przycisk_favorite.disabled=true;
+                        display_favorite();
+                    }
+                    );
                 }
             }
         } catch (err) {
@@ -500,8 +579,8 @@ const games = [
         developer: "Paradox Interactive",
         image: "/images/hoi4.jpg",
         logo: "/images/hoi4_logo.png",
-        genre: "RTS",
-        tags: ["Strategic", "Historic", "Singleplayer", "Simulator", "Multiplayer"],
+        genre: "Real Time Strategy",
+        tags: ["RTS","Strategic", "Historic", "Singleplayer", "Simulator", "Multiplayer"],
         alt: "hearts of iron 4",
         link: "game-articles/hoi4.html"
     }
@@ -525,7 +604,7 @@ function buildCards() {
 
     games.forEach(game => {
         container.innerHTML += `
-        <div class="card">
+        <div class="card" >
             <label class="favorite-container">
                 <input type="checkbox" class="favorite-checkbox" />
                 ${starSVG}
@@ -591,4 +670,97 @@ function buildRecommendations() {
         section.appendChild(row);
         container.appendChild(section);
     });
+}
+
+function filter_genres()
+{
+    const gatunki = JSON.parse(localStorage.getItem("FilterSelectedGenres") || "[]");
+    const kontener = document.getElementById("filter");
+
+    if (gatunki==null || !gatunki.length || !kontener) return;
+
+    gatunki.forEach(genre => {
+        const sekcja = document.createElement("section");
+        sekcja.className = "filter-section";
+        sekcja.innerHTML = `<h2>${genre} games:</h2>`;
+
+        const rzad = document.createElement("div");
+        rzad.className = "filter-row";
+
+        const matchedGames2 = games.filter(game => game.tags.includes(genre));
+        shuffleArray(matchedGames2);
+        const selectedGames2 = matchedGames2;
+
+        selectedGames2.forEach(game => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+        <label class="favorite-container">
+            <input type="checkbox" class="favorite-checkbox" />
+            ${starSVG}
+        </label>
+        <a><img class="img" src="${game.image}" alt="${game.alt}" /></a>
+        <div class="textBox">
+            <a href="${game.link}">
+                <img src="${game.logo}" alt="${game.name} Logo" class="game-logo" />
+            </a>
+            <span>by ${game.developer}</span>
+            <p class="text price">${game.genre}</p>
+        </div>
+    `;
+            rzad.appendChild(card);
+        });
+
+        sekcja.appendChild(rzad);
+        kontener.appendChild(sekcja);
+        localStorage.setItem("FilterSelectedGenres", "null");
+    });
+}
+
+
+function display_favorite()
+{
+    const gry = JSON.parse(sessionStorage.getItem("favoriteGames") || "[]");
+    const kont= document.getElementById("favorite");
+
+    if(gry == null || !gry.length || !kont)return;
+        const sekcja = document.createElement("section");
+        sekcja.className = "fav-section";
+        sekcja.innerHTML = `<h2>Favorite games:</h2>`;
+
+        const rzad = document.createElement("div");
+        rzad.className = "fav-row";
+
+        let matchedGames3=[];
+        gry.forEach(game => 
+        {
+            matchedGames3.push(games.find(graa => graa.name==game));
+        }
+        );
+        console.log(matchedGames3);
+        shuffleArray(matchedGames3);
+
+        matchedGames3.forEach(gierka => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+        <label class="favorite-container">
+            <input type="checkbox" class="favorite-checkbox" />
+            ${starSVG}
+        </label>
+        <a><img class="img" src="${gierka.image}" alt="${gierka.alt}" /></a>
+        <div class="textBox">
+            <a href="${gierka.link}">
+                <img src="${gierka.logo}" alt="${gierka.name} Logo" class="game-logo" />
+            </a>
+            <span>by ${gierka.developer}</span>
+            <p class="text price">${gierka.genre}</p>
+        </div>
+    `;
+            rzad.appendChild(card);
+        });
+
+        sekcja.appendChild(rzad);
+        kont.appendChild(sekcja);
+
 }

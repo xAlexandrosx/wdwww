@@ -37,6 +37,12 @@ body.main-page {
     gap: 1rem;
 }
 
+.filter-row, .fav-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 body[class$='-article'] {
     background-size: cover;
     background-position: center;
@@ -749,6 +755,25 @@ main {
 }
 
 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+    background-color: #0099ff;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxInput2 {
+    display: none;
+}
+
+.customCheckBoxInput2:checked + .customCheckBoxWrapper .customCheckBox {
+    background-color: #0099ff;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput2:checked + .customCheckBoxWrapper .customCheckBox .inner {
+    transform: translateY(-2px);
+}
+
+.customCheckBoxInput2:checked + .customCheckBoxWrapper .customCheckBox:hover {
     background-color: #0099ff;
     box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
 }
