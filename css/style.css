@@ -5,7 +5,7 @@
 }
 
 html, body {
-    padding-top: 30px; /* Match the height of the topbar */
+    padding-top: 30px;
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
@@ -50,7 +50,6 @@ body[class$='-article'] {
     background-repeat: no-repeat;
 }
 
-/* Individual background images */
 body.lol-article {
     background-image: url('../images/lolbackground.jpg');
 }
@@ -249,7 +248,6 @@ main {
     flex-direction: column;
 }
 
-/* Main content */
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -258,7 +256,6 @@ main {
     padding: 20px;
 }
 
-/* Footer */
 .footer {
     background-color: #333;
     text-align: center;
@@ -370,7 +367,7 @@ main {
     height: 30px;
     fill: #ffffff;
     transition: all 0.3s ease;
-    opacity: 0; /* hidden by default */
+    opacity: 0;
     pointer-events: none;
 }
 
@@ -379,20 +376,18 @@ main {
     pointer-events: auto;
 }
 
-/* Show star if checked */
 .favorite-checkbox:checked + .star-icon {
     fill: #ffeb49;
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Optional: scale on hover */
 .card:hover .star-icon:hover {
     transform: scale(1.1);
 }
 
 .game-logo {
-    width: 140px; /* adjust size as needed */
+    width: 140px;
     margin-bottom: 5px;
     transition: transform 0.3s ease;
 }
@@ -401,8 +396,6 @@ main {
     transform: scale(1.05);
 }
 
-/* From Uiverse.io by satyamchaudharydev */
-/* === removing default button style ===*/
 .button {
     margin: 0;
     height: auto;
@@ -416,7 +409,7 @@ main {
 
 #article {
     display: block;
-    clear: both; /* helps clear any floats if used */
+    clear: both;
     max-width: 800px;
     margin: 40px auto;
     padding: 20px 30px;
@@ -431,7 +424,7 @@ main {
 #article h1 {
     font-size: 2.8rem;
     margin-bottom: 15px;
-    color: #1e90ff; /* DodgerBlue */
+    color: #1e90ff;
     text-align: center;
 }
 
@@ -471,12 +464,12 @@ main {
 }
 
 #article img {
-    display: block;          /* makes the image a block element */
-    max-width: 500px;        /* limit max width */
-    width: 100%;             /* scale down if container is smaller */
-    height: auto;            /* maintain aspect ratio */
-    margin: 0 auto 20px auto; /* center horizontally and add 20px bottom margin */
-    border-radius: 8px;      /* optional: slightly rounded corners */
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
 }
 
 .container::after {
@@ -678,8 +671,6 @@ main {
     background-color: #f0f0f0;
 }
 
-/*Game Genre Choice Section*/
-/* From Uiverse.io by WhiteNervosa */
 .customCheckBoxHolder {
     margin: 5px;
     display: flex;
@@ -727,7 +718,6 @@ main {
     transform: translateY(-2px);
 }
 
-/* Multiple Checkboxes can be chained together for a radio input */
 .customCheckBoxWrapper:first-of-type .customCheckBox {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;

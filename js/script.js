@@ -18,8 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
                     filter_genres();
 
-
-                    //favorite
                     if(sessionStorage.getItem("loggedUser"))
                     {
                         document.querySelectorAll(".favorite-checkbox").forEach(checkbox => {
@@ -50,7 +48,6 @@ window.addEventListener("DOMContentLoaded", () => {
                     
                 }
 
-                //logout_login
                 if (file.includes("topbar.html")) {
 
 
@@ -70,8 +67,6 @@ window.addEventListener("DOMContentLoaded", () => {
                         przycisk_favorite.disabled=true;
                     }
 
-
-                    
                     przycisk.addEventListener("click", () =>
                     {
                         przycisk.disabled=true;
@@ -101,7 +96,6 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
 
 const games = [
     {
@@ -762,5 +756,4 @@ function display_favorite()
 
         sekcja.appendChild(rzad);
         kont.appendChild(sekcja);
-
 }

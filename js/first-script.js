@@ -50,9 +50,6 @@ document.getElementById("register-form").addEventListener("submit", event => {
   przelaczanie();
 });
 
-
-
-
 function getUsers() {
   return JSON.parse(localStorage.getItem("users") || "[]");
 }

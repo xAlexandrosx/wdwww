@@ -38,7 +38,6 @@
     const grid = document.getElementById('genreGrid');
     const submitBtn = document.getElementById('submitGenres');
 
-    // Create checkboxes
     genres.forEach(genre => {
         const safeId = "genre-" + genre.toLowerCase().replace(/\s+/g, '-');
         grid.innerHTML += `
@@ -59,7 +58,6 @@
     document.addEventListener("change", updateSubmitButtonState2);
     window.addEventListener("load", updateSubmitButtonState2);
 
-    // On submit, store selected genres
     submitBtn.addEventListener("click", () => {
         const selectedCheckboxes = document.querySelectorAll(".customCheckBoxInput2:checked");
         const FilterSelectedGenresArray = Array.from(selectedCheckboxes).map(cb => cb.value);
@@ -67,7 +65,5 @@
         window.location.href = "index.html";
     });
 </script>
-
-
 </body>
 </html>
