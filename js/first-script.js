@@ -1,10 +1,24 @@
 
-
 const login_form = document.getElementById("login-form");
 const register_form = document.getElementById("register-form");
 const przelacznik_link = document.getElementById("przelacznik-link");
 const przelacznik_text = document.getElementById("przelacznik-text");
 const form_title = document.getElementById("form-title");
+const checkbox=document.getElementById("mode");
+
+
+window.addEventListener("DOMContentLoaded", () => 
+{
+  
+
+    if (sessionStorage.getItem("dark-mode") == "enabled") {
+      checkbox.checked = false;
+    } 
+    else {
+    checkbox.checked = true;
+    }
+}
+);
 
 
 function przelaczanie()
@@ -83,16 +97,7 @@ login_form.addEventListener("submit", event => {
 
 
 //darkmode
-const checkbox=document.getElementById("mode");
-if(checkbox.checked)
-  {
-    sessionStorage.setItem("dark-mode", "disabled");
-  }
-else
-  {
-    sessionStorage.setItem("dark-mode","enabled");
-    document.body.classList.toggle("dark-mode");
-  }
+
 checkbox.addEventListener("change", ()=>
 {
  document.body.classList.toggle("dark-mode"); 

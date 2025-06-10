@@ -1,3 +1,5 @@
+
+
 window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-include]").forEach(async el => {
         const file = el.getAttribute("data-include");
@@ -45,7 +47,32 @@ window.addEventListener("DOMContentLoaded", () => {
                             });
                         });
                     }
+
+
+                    //dark mode
+                    const checkbox2=document.getElementById("mode2");
+
+                    if (sessionStorage.getItem("dark-mode") == "enabled") {
+                    checkbox2.checked = false;
+                    document.body.classList.add("dark-mode");
+                    } 
+                    else {
+                        checkbox2.checked = true;
+                    }
                     
+
+                    checkbox2.addEventListener("change", ()=>
+                        {
+                        document.body.classList.toggle("dark-mode"); 
+                        if(checkbox2.checked)
+                        {
+                        sessionStorage.setItem("dark-mode", "disabled");
+                        }
+                        else
+                        {
+                        sessionStorage.setItem("dark-mode", "enabled");
+                         }
+                    });
                 }
 
                 if (file.includes("topbar.html")) {
@@ -757,3 +784,6 @@ function display_favorite()
         sekcja.appendChild(rzad);
         kont.appendChild(sekcja);
 }
+
+
+
