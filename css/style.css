@@ -275,6 +275,10 @@ main {
     flex-shrink: 0;
 }
 
+.github {
+    color: white;
+}
+
 .card {
     width: 195px;
     height: 285px;
