@@ -13,6 +13,7 @@
     z-index: 1000;
 }
 
+/*search field*/
 .search
 {
     display: flex;
@@ -89,6 +90,7 @@ button.fas {
     background: #e9f3ff;
 }
 
+/*dark mode switch*/
 .switch {
     font-size: 17px;
     position: relative;
@@ -197,6 +199,7 @@ button.fas {
     transform: translateX(30px);
 }
 
+/*Other buttons*/
 .button {
     --border-right: 6px;
     --text-stroke-color: rgba(255,255,255,0.6);

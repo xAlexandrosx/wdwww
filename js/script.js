@@ -1,22 +1,20 @@
-
-
-window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[data-include]").forEach(async el => {
-        const file = el.getAttribute("data-include");
+window.addEventListener("DOMContentLoaded", () => { //czeka aż struktura strony się wczyta
+    document.querySelectorAll("[data-include]").forEach(async el => { //wynajduje elementy z atrybutem data-include
+        const file = el.getAttribute("data-include"); //wczytuje nazwę pliku
         try {
             const res = await fetch(file);
             if (res.ok) {
-                el.innerHTML = await res.text();
+                el.innerHTML = await res.text(); // ładuje zawartość pliku do strony
 
                 el.querySelectorAll("script").forEach(oldScript => {
                     const newScript = document.createElement("script");
                     newScript.textContent = oldScript.textContent;
-                    document.body.appendChild(newScript);
+                    document.body.appendChild(newScript); // uruchamia wszelkie skrypty znajdujące się we wczytywanym pliku
                 });
 
-                if (file.includes("cards.html")) {
-                    buildRecommendations(); // <-- new
-                    buildCards();
+                if (file.includes("cards.html")) { // jeżeli plik to cards html
+                    buildRecommendations(); // tworzy sekcję z rekomendacjami
+                    buildCards(); // tworzy główne karty gier
 
                     filter_genres();
 
@@ -124,6 +122,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// tablica z grami
 const games = [
     {
         name: "League of Legends",
@@ -607,6 +606,7 @@ const games = [
     }
 ];
 
+// gwiazdka
 const starSVG = `
 <svg viewBox="0 0 24 24" class="star-icon" xmlns="http://www.w3.org/2000/svg">
     <path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521
@@ -617,11 +617,11 @@ const starSVG = `
        s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"/>
 </svg>`;
 
-function buildCards() {
-    const container = document.getElementById("card-container");
+function buildCards() { // tworzy stronę główną z kartami
+    const container = document.getElementById("card-container"); //znajduje element z id card-container
     if (!container) return;
 
-    games.sort((a, b) => a.name.localeCompare(b.name));
+    games.sort((a, b) => a.name.localeCompare(b.name)); // sortuje alfabetycznie po tytułach
 
     games.forEach(game => {
         container.innerHTML += `
@@ -643,7 +643,7 @@ function buildCards() {
     });
 }
 
-function shuffleArray(array) {
+function shuffleArray(array) { // ustawia rekomendowane gry w losowej kolejności
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -651,7 +651,7 @@ function shuffleArray(array) {
 }
 
 function buildRecommendations() {
-    const genres = JSON.parse(localStorage.getItem("selectedGenres") || "[]");
+    const genres = JSON.parse(localStorage.getItem("selectedGenres") || "[]"); // pobiera json z local storage
     const container = document.getElementById("recommendations");
 
     if (!genres.length || !container) return;
@@ -683,8 +683,7 @@ function buildRecommendations() {
             </a>
             <span>by ${game.developer}</span>
             <p class="text price">${game.genre}</p>
-        </div>
-    `;
+        </div>`;
             row.appendChild(card);
         });
 

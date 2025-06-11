@@ -12,6 +12,7 @@ html, body {
     flex-direction: column;
 }
 
+/*Background Pattern*/
 body.main-page {
     width: 100%;
     height: 100%;
@@ -32,6 +33,7 @@ body.main-page.dark-mode {
     background-size: 55px 55px;
 }
 
+/*recomended games*/
 .recommendation-section {
     margin: 2rem 1rem;
 }
@@ -53,6 +55,7 @@ body.main-page.dark-mode {
     gap: 1rem;
 }
 
+/*article images section*/
 body[class$='-article'] {
     background-size: cover;
     background-position: center;
@@ -251,7 +254,18 @@ body.kcd2-article {
 header {
     flex-shrink: 0;
 }
+.footer {
+    background-color: #333;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.github {
+    color: #f1f1f1;
+}
 
+/*main content section*/
 main {
     flex: 1;
     display: flex;
@@ -266,23 +280,10 @@ main {
     padding: 20px;
 }
 
-.footer {
-    background-color: #333;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    color: #f1f1f1;
-    flex-shrink: 0;
-}
-
-.github {
-    color: white;
-}
-
+/*game cards section*/
 .card {
     width: 195px;
     height: 285px;
-    background: #313131;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -359,6 +360,17 @@ main {
     transform: scale(1.04) rotate(-1deg);
 }
 
+.game-logo {
+    width: 140px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .game-logo {
+    transform: scale(1.05);
+}
+
+/*favorite star button*/
 .favorite-container {
     position: absolute;
     top: 10px;
@@ -400,16 +412,6 @@ main {
     transform: scale(1.1);
 }
 
-.game-logo {
-    width: 140px;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover .game-logo {
-    transform: scale(1.05);
-}
-
 .button {
     margin: 0;
     height: auto;
@@ -419,8 +421,7 @@ main {
     cursor: pointer;
 }
 
-
-
+/*article styling*/
 #article {
     display: block;
     clear: both;
@@ -486,6 +487,7 @@ main {
     border-radius: 8px;
 }
 
+/*home button*/
 .container::after {
     content: "";
     position: absolute;
@@ -665,29 +667,24 @@ main {
     }
 }
 
-.autocomplete-list {
-    position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    z-index: 10;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.autocomplete-item {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.autocomplete-item:hover {
-    background-color: #f0f0f0;
+/*genre choice*/
+:root {
+    --color-bg-default: rgba(0, 0, 0, 0.16);
+    --color-bg-hover: #2c2c2c;
+    --color-bg-checked: #0099ff;
+    --color-text-default: rgba(255, 255, 255, 0.7);
+    --color-text-hover: white;
+    --color-shadow-inset: rgba(0, 0, 0, 0.15);
+    --color-shadow-light: rgba(255, 255, 255, 0.17);
 }
 
 .customCheckBoxHolder {
     margin: 5px;
-    display: flex;
+    display: inline-flex;
+}
+
+.customCheckBoxWrapper {
+    display: inline-block;
 }
 
 .customCheckBox {
@@ -696,94 +693,81 @@ main {
     overflow: hidden;
     cursor: pointer;
     user-select: none;
-    padding: 2px 8px;
-    background-color: rgba(0, 0, 0, 0.16);
-    border-radius: 0px;
-    color: rgba(255, 255, 255, 0.7);
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 300ms;
-    transition-property: color, background-color, box-shadow;
+    padding: 8px 12px;
+    background-color: var(--color-bg-default);
+    border-radius: 6px;
+    color: var(--color-text-default);
+    font-size: 16px;
+    font-weight: bold;
     display: flex;
-    height: 32px;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
-    outline: none;
     justify-content: center;
+    height: 32px;
     min-width: 55px;
+    box-shadow:
+            var(--color-shadow-inset) 0 2px 1px 0 inset,
+            var(--color-shadow-light) 0 1px 1px 0;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    outline: none;
+    text-align: center;
 }
 
 .customCheckBox:hover {
-    background-color: #2c2c2c;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+    background-color: var(--color-bg-hover);
+    color: var(--color-text-hover);
+    box-shadow:
+            rgba(0, 0, 0, 0.23) 0 -4px 1px 0 inset,
+            var(--color-shadow-light) 0 -1px 1px 0,
+            rgba(0, 0, 0, 0.17) 0 2px 4px 1px;
 }
 
 .customCheckBox .inner {
     font-size: 18px;
     font-weight: 900;
     pointer-events: none;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 300ms;
-    transition-property: transform;
-    transform: translateY(0px);
+    transition: transform 0.3s ease;
+    transform: translateY(0);
 }
 
-.customCheckBox:hover .inner {
+.customCheckBox:hover .inner,
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
     transform: translateY(-2px);
 }
 
 .customCheckBoxWrapper:first-of-type .customCheckBox {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
-    border-right: 0px;
+    border-right: 0;
 }
 
 .customCheckBoxWrapper:last-of-type .customCheckBox {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border-left: 0px;
+    border-left: 0;
 }
 
-.customCheckBoxInput {
-    display: none;
-}
-
-.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
-    background-color: #0099ff;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
-}
-
-.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
-    transform: translateY(-2px);
-}
-
-.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
-    background-color: #0099ff;
-    box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
-}
-
+.customCheckBoxInput,
 .customCheckBoxInput2 {
     display: none;
 }
 
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox,
 .customCheckBoxInput2:checked + .customCheckBoxWrapper .customCheckBox {
-    background-color: #0099ff;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+    background-color: var(--color-bg-checked);
+    color: var(--color-text-hover);
+    box-shadow:
+            rgba(0, 0, 0, 0.23) 0 -4px 1px 0 inset,
+            var(--color-shadow-light) 0 -1px 1px 0,
+            rgba(0, 0, 0, 0.17) 0 2px 4px 1px;
 }
 
-.customCheckBoxInput2:checked + .customCheckBoxWrapper .customCheckBox .inner {
-    transform: translateY(-2px);
-}
-
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover,
 .customCheckBoxInput2:checked + .customCheckBoxWrapper .customCheckBox:hover {
-    background-color: #0099ff;
-    box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
-}
-
-.customCheckBoxWrapper .customCheckBox:hover .inner {
-    transform: translateY(-2px);
+    background-color: var(--color-bg-checked);
+    box-shadow:
+            rgba(0, 0, 0, 0.26) 0 -4px 1px 0 inset,
+            var(--color-shadow-light) 0 -1px 1px 0,
+            rgba(0, 0, 0, 0.15) 0 3px 6px 2px;
 }
 
 .genre-choice-page {
@@ -800,8 +784,8 @@ main {
 h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .genre-grid {
@@ -812,47 +796,12 @@ h2 {
     justify-content: center;
 }
 
-.customCheckBoxHolder {
-    display: inline-block;
-}
-
-.customCheckBoxWrapper {
-    display: inline-block;
-}
-
-.customCheckBox {
-    width: fit-content;
-    padding: 8px 12px;
-    background-color: rgba(0, 0, 0, 0.16);
-    color: rgba(255, 255, 255, 0.7);
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-align: center;
-}
-
-.customCheckBox:hover {
-    background-color: #2c2c2c;
-    color: white;
-}
-
-.customCheckBoxInput {
-    display: none;
-}
-
-.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
-    background-color: #0099ff;
-    color: white;
-}
-
 #submitGenres {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #0099ff;
+    background-color: var(--color-bg-checked);
     color: white;
     border: none;
     border-radius: 6px;

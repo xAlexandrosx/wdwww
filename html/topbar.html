@@ -176,7 +176,7 @@
     let selectedIndex = -1;
     let currentResults = [];
 
-    inputBox.addEventListener("keyup", function (e) {
+    inputBox.addEventListener("keyup", function (e) { // pozwala nawigować po autocomplecie za pomocą strzałek i enter
         if (e.key === "ArrowDown") {
             if (selectedIndex < currentResults.length - 1) {
                 selectedIndex++;
